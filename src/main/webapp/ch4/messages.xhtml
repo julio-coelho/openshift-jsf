@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+	<h:head>
+		<title>#{msgs4.messagesWindowTitle}</title>
+		<h:outputStylesheet library="css" name="styles.css" />
+	</h:head>
+	<h:body>
+		<h:form>
+			<h:outputText value="#{msgs4.greeting}" styleClass="emphasis"/>
+			<br/>
+			<h:messages errorClass="errors" layout="table"/>
+			<h:panelGrid columns="3">
+				#{msgs4.namePrompt} :
+				<h:inputText value="#{personalBean.name}" id="name" required="true" label="#{msgs4.namePrompt}" />
+				<h:message for="name" errorClass="errors"/>
+				#{msgs4.agePrompt} :
+				<h:inputText value="#{personalBean.age}" id="age" required="true" size="3" label="#{msgs4.agePrompt}" />
+				<h:message for="age" errorClass="errors"/>
+			</h:panelGrid>
+			<h:commandButton value="#{msgs4.submitPrompt}" />
+		</h:form>
+	</h:body> 
+</html>

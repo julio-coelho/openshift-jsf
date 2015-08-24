@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+	<h:head>
+		<h:outputStylesheet library="css" name="styles.css" />
+		<title>#{msgs7.titleValidator3}</title>
+	</h:head> 
+	<h:body>
+		<h:form>
+			<h1>#{msgs7.enterDate}</h1>
+			<h:panelGrid columns="3">
+			
+				#{msgs7.day}
+				<h:inputText id="day" value="#{backingBean.day}" size="2" required="true"/>
+				<h:panelGroup/>
+			
+				#{msgs7.month}
+				<h:inputText id="month" value="#{backingBean.month}" size="2" required="true" />
+				<h:panelGroup/>
+				
+				#{msgs7.year}
+				<h:inputText id="year" value="#{backingBean.year}" size="4" required="true" validator="#{backingBean.validateDate}" />
+				<h:message for="year" styleClass="errorMessage" />
+			
+			</h:panelGrid>
+			<h:commandButton value="#{msgs7.submit}" action="result4" />
+		</h:form>
+	</h:body> 
+</html>

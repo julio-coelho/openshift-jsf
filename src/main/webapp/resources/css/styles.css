@@ -1,0 +1,227 @@
+.eventColumns {
+	font-style: italic;
+}
+
+.oddColumns {
+	padding-left: 1em;
+	}
+	
+.emphasis {
+	font-style: italic;
+	font-size: 1.3em;
+}
+
+.disabled {
+	color: gray;
+}
+
+.selected {
+	font-weight: bold;
+}
+
+.errors {
+	font-style: italic;
+	color: red;
+}
+#heading {
+   padding: 20px;
+   height: 30px;
+   margin-bottom: 10px;
+   background: #dddddd;
+   border: 1px solid darkGray;
+}
+
+#sidebarLeft {
+   border: thin solid lightGray;
+   padding: 5px;
+   width: 200px;
+   background: #eeeeee;
+}
+
+#content {
+   padding: 5px;
+   border: thin solid lightGray;
+   background: #fefeef;
+   position: absolute;
+   right: 8px;
+   left: 230px;
+   height: 400px;
+   top: 90px;
+}
+
+.header {
+   font-size: 1.4em;
+   font-style: italic;
+   font-family: Palatino;
+   text-align: center;
+}
+
+.planetImage {
+   padding: 5px;
+   text-align: center;
+}
+
+.planetImageSelected {
+   padding: 5px;
+   text-align: center;
+   background: #fefeef;
+   border: thin solid lightGray;
+}
+
+.welcome {
+   font-style: italic;
+   font-family: Palatino;
+}
+
+.welcomeImage {
+   margin-top: 10px;
+   text-align: center;
+}
+
+.columnHeader {
+   font-style: bold;
+}
+
+.columnFooter {
+   font-size: 0.75em;
+}
+
+.allColumns {
+   text-align: center;
+}
+
+.customers {
+   border: thin solid black;
+}
+.customersHeader {
+   text-align: center;
+   font-style: italic;
+   color: Snow;
+   background: Teal;
+}
+.customersFooter {
+   font-size: 0.75em;
+   text-align: center;
+   background: PowderBlue;
+}
+.delete {
+   text-align: center;
+   color: Black;
+   background: Red;
+}
+.custid {
+   height: 25px;
+   text-align: center;
+   background: MediumTurquoise;
+}
+.name {
+   text-align: left;
+   background: PowderBlue;
+}
+.firstName {
+   width: 6em;
+   text-align: left;
+   color: Black;
+   background: MediumTurquoise;
+}
+.age {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: PowderBlue;
+}
+.sex {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: MediumTurquoise;
+}
+.city {
+   width: 9em;
+   text-align: center;
+   color: Black;
+   background: PowderBlue;
+}
+.state {
+   width: 3em;
+   text-align: center;
+   color: Black;
+   background: MediumTurquoise;
+}
+.zip {
+   width: 6em;
+   text-align: center;
+   background: PowderBlue;
+}
+.evenRow {
+   background: PowderBlue;
+}
+.oddRow {
+   background: MediumTurquoise;
+   text-style: italic;
+}
+.pageLink {
+   font-size: 0.75em;
+}
+.editableControl {
+   text-align:Left;
+}
+.controlPanel {
+   text-align:left;
+}
+.page {
+   text-align:left;
+}
+.bulbImage {
+   border-width: 0px;
+}
+.emphasis {
+   font-size: 1.35em;
+   font-style: italic;
+}
+.value {
+   font-style: italic;
+}
+.controlLeft {
+   width: 45px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlMiddle {
+   width: 50px;
+   vertical-align: top;
+   text-align:left;
+}
+.controlRight {
+   width: 40px;
+   vertical-align: top;
+   text-align:left;
+}
+.pageLinks {
+   border: thin solid Black;
+   background: PowderBlue;
+}
+.names {
+   border: thin solid black;
+}
+.namesHeader {
+   text-align: center;
+   font-style: italic;
+}
+.last {
+   height: 25px;
+   text-align: center;
+   background: MediumTurquoise;
+}
+.first {
+   text-align: left;
+   background: PowderBlue;
+}
+.caption {
+	font-size: 0.9em;
+	font-style: italic;
+}
+.errorMessage {
+   color: red; 
+}
+

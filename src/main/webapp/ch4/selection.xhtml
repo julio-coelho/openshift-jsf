@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:head>
+		<h:outputStylesheet library="css" name="styles.css" />
+		<title>##{msgs4.selectionWindowTitle}</title>
+	</h:head>
+	<h:body>
+		<h:outputText value="#{msgs4.selectionPageTitle}" styleClass="emphasis" />
+		<h:form>
+			<h:panelGrid columns="2">
+				#{msgs4.namePrompt}
+				<h:inputText value="#{form.name}" />
+				#{msgs4.contactMePrompt}
+				<h:selectBooleanCheckbox value="#{form.contactMe}" />
+				#{msgs4.bestDayPrompt}
+				<h:selectManyMenu value="#{form.bestDayToContact}">
+					<f:selectItems value="#{form.daysOfTheWeek}" var="w" itemLabel="#{w.dayName}" itemValue="#{w.dayNumber}" />
+				</h:selectManyMenu>
+				#{msgs4.yearOfBirthPrompt}
+				<h:selectOneMenu value="#{form.yearOfBirth}" required="true">
+					<f:selectItems value="#{form.yearItems}" />
+				</h:selectOneMenu>
+				#{msgs4.colorPrompt}
+				<h:selectManyCheckbox value="#{form.colors}" disabledClass="disabled"
+					onchange="submit()">
+					<f:selectItems value="#{form.colorItems}" />
+				</h:selectManyCheckbox>
+				#{msgs4.languagePrompt}
+				<h:selectManyListbox value="#{form.languages}" size="5">
+					<f:selectItems value="#{form.languageItems}" />
+				</h:selectManyListbox>
+				#{msgs4.educationPrompt}
+				<h:selectOneRadio value="#{form.education}" layout="pageDirection">
+					<f:selectItems value="#{form.educationItems}" />
+				</h:selectOneRadio>
+			</h:panelGrid>
+			<h:commandButton value="#{msgs4.buttonPrompt}" action="showInformation" />
+		</h:form>
+		<h:messages />
+	</h:body>
+</html>

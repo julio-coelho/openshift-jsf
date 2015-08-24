@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+	<h:head>
+		<h:outputStylesheet library="css" name="styles.css" />
+		<title>#{msgs6.windowTitleComponents}</title>
+	</h:head> 
+	<h:body style="background: #eee"> 
+		<h:form>
+			<h:dataTable value="#{numberList}" var="number">
+				<h:column>
+					<f:facet name="header">#{msgs6.numberHeader}</f:facet>
+					#{number}
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.textfieldHeader}</f:facet>
+					<h:inputText value="#{number}" size="3" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.buttonHeader}</f:facet>
+					<h:commandButton value="#{number}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.checkboxHeader}</f:facet>
+					<h:selectBooleanCheckbox value="false" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.linkHeader}</f:facet>
+					<h:commandLink>#{number}</h:commandLink>
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.graphicHeader}</f:facet>
+					<h:graphicImage library="images" name="dice#{number}.gif" style="border: 0px"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.menuHeader}</f:facet>
+					<h:selectOneMenu>
+						<f:selectItem itemLabel="#{number}" itemValue="#{number}"/>
+					</h:selectOneMenu>
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.radioHeader}</f:facet>
+					<h:selectOneRadio value="nextMonth" layout="lineDirection">
+						<f:selectItem itemValue="yes" itemLabel="yes"/>
+						<f:selectItem itemValue="no" itemLabel="no"/>
+					</h:selectOneRadio>
+				</h:column>
+				<h:column>
+					<f:facet name="header">#{msgs6.listboxHeader}</f:facet>
+					<h:selectOneListbox size="4">
+						<f:selectItem itemValue="yes" itemLabel="yes"/>
+						<f:selectItem itemValue="maybe" itemLabel="maybe"/>
+						<f:selectItem itemValue="no" itemLabel="no"/>
+						<f:selectItem itemValue="ok" itemLabel="ok"/>
+					</h:selectOneListbox>
+				</h:column>
+			</h:dataTable>
+		</h:form>
+	</h:body> 	
+</html>

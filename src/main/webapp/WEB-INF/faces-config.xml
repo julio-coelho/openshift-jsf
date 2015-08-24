@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>startOver</from-outcome>
+			<to-view-id>/ch3/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/ch3/again.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/ch3/failure.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<navigation-case>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/ch3/again.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<application>
+		<locale-config>
+			<default-locale>pt</default-locale>
+			<supported-locale>en</supported-locale>
+			<supported-locale>de</supported-locale>
+		</locale-config>
+		<resource-bundle>
+			<base-name>com.corejsf.ch2.messages</base-name>
+			<var>msgs2</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>com.corejsf.ch3.messages</base-name>
+			<var>msgs3</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>com.corejsf.ch4.messages</base-name>
+			<var>msgs4</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>com.corejsf.ch5.messages</base-name>
+			<var>msgs5</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>com.corejsf.ch6.messages</base-name>
+			<var>msgs6</var>
+		</resource-bundle>
+		<resource-bundle>
+			<base-name>com.corejsf.ch7.messages</base-name>
+			<var>msgs7</var>
+		</resource-bundle>
+		<message-bundle>com.corejsf.ch7.messages</message-bundle>
+	</application>
+	
+	<managed-bean>
+		<managed-bean-name>numberList</managed-bean-name>
+		<managed-bean-class>java.util.ArrayList</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<list-entries>
+			<value>1</value>
+			<value>2</value>
+			<value>3</value>
+			<value>4</value>
+			<value>5</value>
+		</list-entries>
+	</managed-bean>
+	
+</faces-config>

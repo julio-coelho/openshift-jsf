@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="40,88,53,42" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="startOver::#ch3#index.xhtml" NAME="output"
+    PATH="/ch3/index.xhtml" TARGET="rules:#ch3#index.xhtml"
+    TITLE="startOver" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ch3#index.xhtml" PATH="/ch3/index.xhtml"
+  SHAPE="240,88,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#ch3#again.xhtml" PATH="/ch3/again.xhtml"
+  SHAPE="240,224,50,41" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ch3#again.xhtml:0" NAME="item"
+   PATH="/ch3/again.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="failure::#ch3#failure.xhtml" NAME="output"
+    PATH="/ch3/failure.xhtml" TARGET="rules:#ch3#failure.xhtml"
+    TITLE="failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ch3#failure.xhtml" PATH="/ch3/failure.xhtml"
+  SHAPE="416,240,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,232,53,42" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="failure::#ch3#again.xhtml" NAME="output"
+    PATH="/ch3/again.xhtml" TARGET="rules:#ch3#again.xhtml"
+    TITLE="failure" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

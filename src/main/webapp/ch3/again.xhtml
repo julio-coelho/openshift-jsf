@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:metadata>
+	<f:viewParam name="q" value="#{javaQuizBean.currentProblem}" />
+</f:metadata>
+<h:head>
+	<title>#{msgs3.title}</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p>#{msgs3.notCorrect}</p>
+		<p>#{javaQuizBean.question}</p>
+		<p>
+			<h:inputText value="#{javaQuizBean.response}" />
+		</p>
+		<p>
+			<h:commandButton action="#{javaQuizBean.answerAction}"
+				value="#{msgs3.checkAnswer}" />
+		</p>
+		<p>
+			<h:link outcome="#{javaQuizBean.skipOutcome}" value="Skip">
+				<f:param name="q" value="#{javaQuizBean.currentProblem + 1}" />
+			</h:link>
+		</p>
+	</h:form>
+</h:body>
+</html>

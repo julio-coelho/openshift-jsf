@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"> 
+
+	<h:head>
+		<h:outputStylesheet library="css" name="styles.css" />
+		<title>#{msgs7.titleConverter}</title>
+	</h:head> 
+	<h:body>
+		<h:form>
+			<h1>#{msgs7.paymentInformation}</h1>
+			<h:panelGrid columns="2">
+			
+				#{msgs7.amount}
+				<h:outputText value="#{paymentBean2.amount}" >
+					<f:convertNumber type="currency"/>
+				</h:outputText>
+				
+				#{msgs7.creditCard}
+				<h:outputText value="#{paymentBean2.card}" />
+				
+				#{msgs7.expirationDate}
+				<h:outputText value="#{paymentBean2.date}" >
+					<f:convertDateTime pattern="MM/yyyy"/>
+				</h:outputText>
+			
+			</h:panelGrid>
+			
+			<h:commandButton action="bean-validator" value="#{msgs7.back}" />
+			
+		</h:form>
+	</h:body> 
+</html>
